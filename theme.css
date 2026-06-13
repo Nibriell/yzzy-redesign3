@@ -40,8 +40,8 @@ img{max-width:100%}
 /* ---------- nav ---------- */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 4vw;transition:background .3s,border-color .3s,box-shadow .3s;border-bottom:1px solid transparent}
 nav.scrolled{background:rgba(242,239,231,.85);backdrop-filter:blur(16px);border-bottom-color:var(--line);box-shadow:0 1px 0 rgba(0,0,0,.02)}
-.logo{font-family:var(--f-display);font-weight:900;font-size:1.85rem;letter-spacing:-.05em;text-decoration:none;color:var(--ink);display:inline-flex;align-items:baseline;line-height:1}
-.logo .d{width:.2em;height:.2em;border-radius:50%;background:var(--blue);display:inline-block;margin-left:.04em;transition:transform .25s}
+.logo{font-family:var(--f-display);font-weight:900;font-size:1.85rem;letter-spacing:-.05em;text-decoration:none;color:var(--blue);display:inline-flex;align-items:baseline;line-height:1}
+.logo .d{width:.2em;height:.2em;border-radius:50%;background:var(--ink);display:inline-block;margin-left:.04em;transition:transform .25s}
 .logo:hover .d{transform:translateY(-.15em)}
 .nav-links{display:flex;gap:26px;list-style:none}
 .nav-links a{font-family:var(--f-text);font-size:.86rem;font-weight:500;color:var(--ink-2);text-decoration:none;transition:color .2s;padding:6px 0;position:relative}
@@ -130,8 +130,8 @@ footer{border-top:1px solid var(--line);padding:70px 4vw 36px;background:var(--p
 .foot-grid a{color:var(--ink-2);text-decoration:none;font-size:.88rem;transition:color .2s}
 .foot-grid a:hover{color:var(--blue)}
 .foot-brand p{color:var(--ink-soft);font-size:.85rem;max-width:300px;margin-top:14px}
-.foot-mega{font-family:var(--f-display);font-weight:900;font-size:clamp(4rem,18vw,17rem);line-height:.8;letter-spacing:-.05em;color:var(--ink);margin-bottom:40px}
-.foot-mega .d{color:var(--blue)}
+.foot-mega{font-family:var(--f-display);font-weight:900;font-size:clamp(4rem,18vw,17rem);line-height:.8;letter-spacing:-.05em;color:var(--blue);margin-bottom:40px}
+.foot-mega .d{color:var(--ink)}
 .foot-bottom{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:24px;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.06em;color:var(--ink-soft)}
 .foot-bottom a{color:inherit}
 @media(max-width:900px){.foot-grid{grid-template-columns:1fr 1fr}}

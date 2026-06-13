@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>YZZY — E ușor. Telefoane recondiționate, garantate 2 ani</title>
 <meta name="description" content="Telefoane și gadgeturi recondiționate, verificate de profesioniști. Garanție 2 ani, retur gratuit 30 de zile, livrare în 24h, plata în rate. Simplu.">
-<link rel="stylesheet" href="theme.css?v=1">
+<link rel="stylesheet" href="theme.css?v=2">
 <style>
 .hero{padding:140px 4vw 70px;position:relative}
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:center}
@@ -13,7 +13,8 @@
 .kicker{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:22px;display:flex;align-items:center;gap:10px}
 .kicker::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--blue)}
 .hero h1{font-size:clamp(3rem,9vw,7.5rem);letter-spacing:-.04em;line-height:.92}
-.hero h1 .pop{display:inline-block;width:.16em;height:.16em;border-radius:50%;background:var(--blue);vertical-align:.06em;margin-left:.04em;animation:pop .5s cubic-bezier(.34,1.8,.5,1) .5s backwards}
+.hero h1 .conn{color:var(--ink-2)}
+.hero h1 .pop{display:inline-block;width:.16em;height:.16em;border-radius:50%;background:var(--ink);vertical-align:.06em;margin-left:.04em;animation:pop .5s cubic-bezier(.34,1.8,.5,1) .9s backwards}
 @keyframes pop{from{transform:scale(0)}}
 .hero-sub{max-width:420px;color:var(--ink-2);font-size:1.08rem;margin:26px 0 30px}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:30px}
@@ -90,7 +91,7 @@
   <div class="hero-grid">
     <div>
       <div class="kicker">Recondiționat, fără complicații</div>
-      <h1 class="display">Un telefon bun.<br>E <span class="blue">ușor</span><span class="pop"></span></h1>
+      <h1 class="display">Un telefon bun.<br><span class="conn">E</span> <span class="blue">ușor</span>.<br><span class="conn">E</span> <span class="blue">yzzy</span><span class="pop"></span></h1>
       <p class="hero-sub">Telefoane verificate de profesioniști, cu garanție 2 ani și retur gratuit 30 de zile. Alegi, plătești, primești a doua zi. Atât.</p>
       <div class="hero-actions">
         <a class="btn btn-blue" href="catalog.html">Vezi telefoanele →</a>
@@ -210,8 +211,8 @@
 
 <footer id="footer"></footer>
 
-<script src="data/catalog.js?v=1"></script>
-<script src="app.js?v=1"></script>
+<script src="data/catalog.js?v=2"></script>
+<script src="app.js?v=2"></script>
 <script>
 renderNav('index.html');
 renderMarquee(document.getElementById('marq'));
