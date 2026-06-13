@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YZZY — E ușor. Telefoane recondiționate, garantate 2 ani</title>
+<meta name="description" content="Telefoane și gadgeturi recondiționate, verificate de profesioniști. Garanție 2 ani, retur gratuit 30 de zile, livrare în 24h, plata în rate. Simplu.">
+<link rel="stylesheet" href="theme.css?v=1">
+<style>
+.hero{padding:140px 4vw 70px;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:center}
+@media(max-width:1000px){.hero-grid{grid-template-columns:1fr;gap:36px}}
+.kicker{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:22px;display:flex;align-items:center;gap:10px}
+.kicker::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--blue)}
+.hero h1{font-size:clamp(3rem,9vw,7.5rem);letter-spacing:-.04em;line-height:.92}
+.hero h1 .pop{display:inline-block;width:.16em;height:.16em;border-radius:50%;background:var(--blue);vertical-align:.06em;margin-left:.04em;animation:pop .5s cubic-bezier(.34,1.8,.5,1) .5s backwards}
+@keyframes pop{from{transform:scale(0)}}
+.hero-sub{max-width:420px;color:var(--ink-2);font-size:1.08rem;margin:26px 0 30px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:30px}
+.hero-trust{display:flex;gap:22px;flex-wrap:wrap}
+.hero-trust span{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.03em;text-transform:uppercase;color:var(--ink-soft);display:flex;align-items:center;gap:7px}
+.hero-trust span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--blue);flex:none}
+/* card produs featured */
+.feat{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:30px;box-shadow:0 40px 80px -50px rgba(20,23,28,.4);position:relative}
+.feat .flabel{position:absolute;top:-12px;left:30px;background:var(--blue);color:#fff;font-family:var(--f-mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:100px}
+.feat .fimg{height:280px;display:grid;place-items:center;margin-bottom:18px}
+.feat .fimg img{max-height:260px;max-width:80%;object-fit:contain;mix-blend-mode:multiply}
+.feat h3{font-family:var(--f-display);font-weight:800;font-size:1.4rem;letter-spacing:-.02em;line-height:1.1}
+.feat .fstate{font-family:var(--f-mono);font-size:.66rem;text-transform:uppercase;color:var(--ink-soft);margin:6px 0 16px}
+.feat .ffoot{display:flex;align-items:center;justify-content:space-between;gap:14px;border-top:1px solid var(--line);padding-top:18px}
+.feat .fprice{font-family:var(--f-display);font-weight:900;font-size:1.9rem;letter-spacing:-.03em}
+.feat .fprice s{display:block;font-family:var(--f-mono);font-weight:400;font-size:.7rem;color:var(--ink-soft);letter-spacing:0}
+/* 3 pasi */
+.easy3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.e3{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px;position:relative;transition:transform .25s,box-shadow .25s}
+.e3:hover{transform:translateY(-4px);box-shadow:0 20px 40px -24px rgba(20,23,28,.2)}
+.e3 .n{font-family:var(--f-display);font-weight:900;font-size:2.6rem;color:var(--blue-tint);line-height:1;letter-spacing:-.03em}
+.e3 .n b{color:var(--blue)}
+.e3 h4{font-family:var(--f-display);font-weight:800;font-size:1.25rem;margin:14px 0 8px;letter-spacing:-.02em}
+.e3 p{color:var(--ink-soft);font-size:.92rem}
+@media(max-width:760px){.easy3{grid-template-columns:1fr}}
+.cat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.cat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px 20px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:30px;transition:border-color .25s,transform .25s,background .25s}
+.cat:hover{transform:translateY(-4px);border-color:var(--blue);background:var(--blue-tint)}
+.cat .cc{font-family:var(--f-mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+.cat h3{font-family:var(--f-display);font-weight:800;font-size:1.25rem;letter-spacing:-.02em}
+.cat .ccount{font-family:var(--f-mono);font-size:.62rem;color:var(--ink-soft)}
+@media(max-width:1000px){.cat-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.cat-grid{grid-template-columns:1fr}}
+.why{display:grid;grid-template-columns:.85fr 1.15fr;gap:50px;align-items:center}
+@media(max-width:900px){.why{grid-template-columns:1fr}}
+.why-list{display:flex;flex-direction:column}
+.wrow{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
+.wrow:last-child{border-bottom:none}
+.wrow .wi{width:34px;height:34px;border-radius:50%;background:var(--blue-tint);color:var(--blue);display:grid;place-items:center;flex:none;font-weight:700}
+.wrow h4{font-family:var(--f-display);font-weight:700;font-size:1.1rem;margin-bottom:3px;letter-spacing:-.01em}
+.wrow p{color:var(--ink-soft);font-size:.92rem}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+.stat b{font-family:var(--f-display);font-weight:900;font-size:clamp(2.4rem,5vw,3.6rem);color:var(--blue);display:block;line-height:1;letter-spacing:-.03em}
+.stat span{font-family:var(--f-mono);font-size:.6rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-top:8px}
+.rate-strip{background:var(--ink);color:var(--paper);border-radius:24px;padding:42px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
+.rate-strip .sec-title{color:var(--paper)}.rate-strip .sec-title em{color:#8FA6FF}
+.rate-tiles{display:grid;grid-template-columns:repeat(4,minmax(120px,1fr));gap:10px;margin-top:18px}
+.rate-tiles .partner-tile{background:#fff}
+@media(max-width:1000px){.rate-strip{grid-template-columns:1fr}.rate-tiles{grid-template-columns:repeat(2,1fr)}}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:900px){.tgrid{grid-template-columns:1fr}}
+.tcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;gap:14px}
+.tcard .stars{color:var(--blue);letter-spacing:3px;font-size:.85rem}
+.tcard p{font-size:.95rem;color:var(--ink-2)}
+.tcard .who{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);margin-top:auto}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;background:none;border:none;color:var(--ink);font-family:var(--f-display);font-weight:700;font-size:clamp(1.05rem,2.2vw,1.4rem);text-align:left;padding:26px 0;display:flex;justify-content:space-between;align-items:center;gap:18px;cursor:none;letter-spacing:-.02em}
+.faq-q .ic{flex:none;width:34px;height:34px;border:1.5px solid var(--line-2);border-radius:50%;display:grid;place-items:center;color:var(--blue);transition:transform .3s,background .3s,color .3s}
+.faq-item.open .faq-q .ic{transform:rotate(45deg);background:var(--blue);color:#fff;border-color:var(--blue)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.22,1,.36,1)}
+.faq-a p{color:var(--ink-soft);padding:0 50px 26px 0;font-size:.96rem}
+.final{padding:120px 4vw;text-align:center;background:var(--blue);color:#fff}
+.final h2{font-size:clamp(2.6rem,8vw,6rem);margin-bottom:18px;letter-spacing:-.04em}
+.final h2 .d{color:#fff}
+.final p{color:rgba(255,255,255,.82);max-width:440px;margin:0 auto 30px}
+.final .btn-ghost{border-color:rgba(255,255,255,.5);color:#fff}
+.final .btn-ghost:hover{background:#fff;color:var(--blue);border-color:#fff}
+</style>
+</head>
+<body>
+<nav id="nav"></nav>
+
+<header class="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="kicker">Recondiționat, fără complicații</div>
+      <h1 class="display">Un telefon bun.<br>E <span class="blue">ușor</span><span class="pop"></span></h1>
+      <p class="hero-sub">Telefoane verificate de profesioniști, cu garanție 2 ani și retur gratuit 30 de zile. Alegi, plătești, primești a doua zi. Atât.</p>
+      <div class="hero-actions">
+        <a class="btn btn-blue" href="catalog.html">Vezi telefoanele →</a>
+        <a class="btn btn-ghost" href="vinde.html">Vinde-l pe al tău</a>
+      </div>
+      <div class="hero-trust">
+        <span>Garanție 2 ani</span><span>Retur 30 zile</span><span>Livrare 24h</span>
+      </div>
+    </div>
+    <div class="feat reveal in" id="feat"></div>
+  </div>
+</header>
+
+<div class="marq" id="marq" aria-hidden="true"></div>
+
+<section>
+  <div class="sec-head reveal">
+    <h2 class="sec-title">Trei pași. <em>Gata.</em></h2>
+    <span class="sec-num"><b>01</b> / CUM MERGE</span>
+  </div>
+  <div class="easy3">
+    <div class="e3 reveal"><span class="n"><b>1</b></span><h4>Alegi</h4><p>Răsfoiești telefoane verificate, cu starea și prețul afișate clar. Fără surprize.</p></div>
+    <div class="e3 reveal"><span class="n"><b>2</b></span><h4>Plătești cum vrei</h4><p>Card, ramburs sau în rate prin patru bănci partenere. 100% online.</p></div>
+    <div class="e3 reveal"><span class="n"><b>3</b></span><h4>Primești a doua zi</h4><p>Livrare în 24h, colet asigurat. Garanție 2 ani și 30 de zile retur.</p></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="sec-head reveal">
+    <h2 class="sec-title">Alege <em>categoria</em></h2>
+    <span class="sec-num"><b>02</b> / CATALOG</span>
+  </div>
+  <div class="cat-grid" id="cats"></div>
+</section>
+
+<section style="padding-top:0">
+  <div class="sec-head reveal">
+    <h2 class="sec-title">Nou <em>în stoc</em></h2>
+    <a class="pill" href="catalog.html">Vezi tot →</a>
+  </div>
+  <div class="pgrid" id="newGrid"></div>
+</section>
+
+<section>
+  <div class="why">
+    <div class="reveal">
+      <span class="sec-num"><b>03</b> / DE CE E UȘOR</span>
+      <h2 class="sec-title" style="margin:16px 0 18px">Fără bătăi <em>de cap.</em></h2>
+      <p class="muted" style="max-width:380px">Ne ocupăm noi de partea grea: verificăm, igienizăm, garantăm. Tu doar alegi.</p>
+      <div class="stats">
+        <div class="stat"><b data-count="12000" data-suffix="+">0</b><span>telefoane vândute</span></div>
+        <div class="stat"><b data-count="13" data-suffix="+">0</b><span>ani experiență GSM</span></div>
+        <div class="stat"><b data-count="4.9" data-dec="1">0</b><span>rating Google</span></div>
+      </div>
+    </div>
+    <div class="why-list reveal">
+      <div class="wrow"><span class="wi">✓</span><div><h4>Verificat de profesioniști</h4><p>Fiecare telefon e deschis, testat și igienizat de tehnicieni cu peste 13 ani de experiență.</p></div></div>
+      <div class="wrow"><span class="wi">✓</span><div><h4>Garanție 2 ani</h4><p>Exact ca la produsele noi. Plus 30 de zile în care poți da retur fără explicații.</p></div></div>
+      <div class="wrow"><span class="wi">✓</span><div><h4>Preț corect, afișat clar</h4><p>Starea reală și prețul, fără asteriscuri. Vezi exact ce primești.</p></div></div>
+      <div class="wrow"><span class="wi">✓</span><div><h4>Livrare în 24h</h4><p>Comanzi azi, e la tine mâine. Colet asigurat, oriunde în România.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="rate-strip reveal">
+    <div>
+      <span class="sec-num" style="color:#8FA6FF"><b style="color:#8FA6FF">04</b> / FINANȚARE</span>
+      <h2 class="sec-title" style="font-size:clamp(1.6rem,3.2vw,2.4rem);margin:12px 0 6px">Plata în rate.<br><em>Patru bănci, 100% online.</em></h2>
+      <div class="rate-tiles">
+        <a class="partner-tile" href="rate.html#unicredit"><img src="https://yzzy.ro/wp-content/uploads/2025/02/logo-unicredit-contrast-alb-2.jpg" alt="UniCredit Consumer Financing"></a>
+        <a class="partner-tile" href="rate.html#bt"><img src="https://yzzy.ro/wp-content/uploads/2025/02/Logo-Smart-by-BT-Direct-1-300x115.webp" alt="Smart by BT Direct"></a>
+        <a class="partner-tile" href="rate.html#leanpay"><img src="https://yzzy.ro/wp-content/uploads/2025/06/LP-logo-small-300x86.png" alt="LeanPay"></a>
+        <a class="partner-tile" href="rate.html#tbi"><img src="https://yzzy.ro/wp-content/uploads/2025/02/tbi-bank-logo.webp" alt="TBI Bank"></a>
+      </div>
+    </div>
+    <a class="btn btn-blue" href="rate.html" style="background:#fff;color:var(--blue)">Vezi finanțarea →</a>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="sec-head reveal">
+    <h2 class="sec-title">Clienți <em>mulțumiți</em></h2>
+    <span class="sec-num"><b>05</b> / GOOGLE ★ 4.9</span>
+  </div>
+  <div class="tgrid">
+    <div class="tcard reveal"><span class="stars">★★★★★</span><p>„Telefonul arăta impecabil, ca scos din cutie. Livrare a doua zi și factură cu garanție de 2 ani. Recomand cu încredere."</p><span class="who">Andreea M. · iPhone 13 Pro · Suceava</span></div>
+    <div class="tcard reveal"><span class="stars">★★★★★</span><p>„Ezitam să iau recondiționat, dar bateria impecabilă și returul de 30 de zile m-au convins. După un an merge perfect."</p><span class="who">Raluca D. · MacBook Air · Cluj</span></div>
+    <div class="tcard reveal"><span class="stars">★★★★★</span><p>„Am plătit în rate prin BT Direct, aprobat în 10 minute, totul online. A doua zi telefonul era la mine."</p><span class="who">Cristian I. · Galaxy S24 · București</span></div>
+  </div>
+</section>
+
+<section style="padding-top:0" id="faq">
+  <div class="sec-head reveal">
+    <h2 class="sec-title">Întrebări <em>frecvente</em></h2>
+    <span class="sec-num"><b>06</b> / FAQ</span>
+  </div>
+  <div style="max-width:840px">
+    <div class="faq-item reveal"><button class="faq-q">Ce înseamnă „verificat de profesioniști"?<span class="ic">+</span></button>
+      <div class="faq-a"><p>Fiecare dispozitiv e deschis, inspectat și testat de tehnicieni cu peste 13 ani de experiență: baterie, ecran, camere, senzori, conectivitate. Apoi e igienizat profesional.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">Cum funcționează garanția de 2 ani?<span class="ic">+</span></button>
+      <div class="faq-a"><p>Exact ca la un produs nou: 24 de luni pentru persoane fizice (12 luni pentru firme și pentru anumite categorii). Orice defect care nu e cauzat de utilizare necorespunzătoare se repară gratuit în service-ul nostru din Suceava.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">Pot da retur dacă nu îmi place?<span class="ic">+</span></button>
+      <div class="faq-a"><p>Da, ai 30 de zile calendaristice de la primire. Produsul trebuie returnat în starea în care l-ai primit, iar banii se rambursează prin transfer bancar în maximum 30 de zile.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">Cum plătesc în rate?<span class="ic">+</span></button>
+      <div class="faq-a"><p>Alegi finanțarea direct din coș: UniCredit Consumer Financing, Smart by BT Direct, LeanPay sau TBI Bank. Aprobarea durează câteva minute, 100% online. Dobânda și DAE sunt stabilite de fiecare finanțator, în funcție de numărul de rate.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">Cât durează livrarea?<span class="ic">+</span></button>
+      <div class="faq-a"><p>De regulă 24 de ore, orientativ 1–3 zile lucrătoare în funcție de zonă. Livrarea e gratuită, prin curier, cu colet asigurat.</p></div></div>
+  </div>
+</section>
+
+<section class="final">
+  <h2 class="display reveal">Simplu ca bună ziua<span class="d">.</span></h2>
+  <p class="reveal">152 de telefoane verificate, gata de livrare. Următorul poate fi al tău.</p>
+  <a class="btn btn-ghost reveal" href="catalog.html">Vezi telefoanele →</a>
+</section>
+
+<footer id="footer"></footer>
+
+<script src="data/catalog.js?v=1"></script>
+<script src="app.js?v=1"></script>
+<script>
+renderNav('index.html');
+renderMarquee(document.getElementById('marq'));
+renderFooter(document.getElementById('footer'));
+
+// produs featured (cel mai nou telefon cu reducere, altfel primul)
+const feat=P.filter(p=>p.cat==='telefoane').find(p=>p.on_sale&&p.regular>p.price)||P.find(p=>p.cat==='telefoane');
+const fsale=feat.on_sale&&feat.regular>feat.price;
+document.getElementById('feat').innerHTML=`
+  <span class="flabel">${fsale?('reducere '+Math.round((1-feat.price/feat.regular)*100)+'%'):'nou în stoc'}</span>
+  <a class="fimg" href="produs.html?id=${feat.id}"><img src="${feat.imgs[0]}" alt="${feat.name}"></a>
+  <h3>${feat.brand} ${feat.name}</h3>
+  <div class="fstate">${feat.condition} · garanție 2 ani · livrare 24h</div>
+  <div class="ffoot">
+    <span class="fprice">${fsale?`<s>${fmtLei(feat.regular)}</s>`:''}${fmtLei(feat.price)}</span>
+    <button class="btn btn-blue" data-add="${feat.id}">Adaugă în coș</button>
+  </div>`;
+document.getElementById('feat').addEventListener('click',e=>{const b=e.target.closest('[data-add]');if(b){e.preventDefault();addToCart(b.dataset.add);}});
+
+// categorii
+document.getElementById('cats').innerHTML=CATS.map((c,i)=>{
+  const n=P.filter(p=>p.cat===c.key).length;
+  return `<a class="cat reveal" href="catalog.html?cat=${c.key}">
+    <span class="cc">0${i+1}</span>
+    <div><h3>${c.label}</h3><span class="ccount">${n} produse →</span></div></a>`;
+}).join('');
+
+// nou in stoc
+const newGrid=document.getElementById('newGrid');
+newGrid.innerHTML=P.filter(p=>p.cat==='telefoane').slice(0,4)
+  .concat(P.filter(p=>p.cat==='tablete').slice(0,1),P.filter(p=>p.cat==='laptopuri').slice(0,1),P.filter(p=>p.cat==='smartwatch').slice(0,1),P.filter(p=>p.cat==='accesorii').slice(0,1))
+  .map(cardHTML).join('');
+bindAddButtons(newGrid);
+
+// FAQ
+document.querySelectorAll('.faq-q').forEach(btn=>btn.addEventListener('click',()=>{
+  const item=btn.parentElement,ans=item.querySelector('.faq-a'),open=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(o=>{o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null});
+  if(!open){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px'}
+}));
+
+initReveal();initCounters();
+</script>
+</body>
+</html>
